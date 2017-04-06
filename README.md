@@ -22,7 +22,7 @@ Detect patterns of three failed login attempts from the same IP address over 20 
 # Solution Summary
 
 This solution is implemented and tested in Python 2.7.2+ (default, Oct  4 2011, 20:03:08) [GCC 4.6.1] on linux2. 
-The python modules used are all common modules: collections,sys and datetime. No addtional modules are needed.
+The python modules used are all common modules: collections,sys,heapq and datetime. No addtional modules are needed.
 
 # Source Files
 
@@ -45,6 +45,10 @@ The program can be executed in one of the following two ways:
 
 1) Run "/insight/run.sh" file in the terminal. The input file need to be placed in the "/insight/log_input" and need to be named "log.txt". The output for each feature will be placed in "/insight/log_output" and in "txt" format.
 2) Run: "python [process_log.py] [log.txt] [hosts.txt] [resources.txt] [hours.txt] [blocked.txt]". If not enought arguments are given, a warning message will show up.
+
+# Additional notes
+
+To find top_10, both a heap constructed from "heapq.py" and "collections.Counter.most_common" method have been used to compare the efficiency
 
 
 
